@@ -38,7 +38,7 @@
 const key = Math.random(36).toString().substring(2)
 var factory = splitio({ 
   core: {
-    authorizationKey: 'mmo4methb0r90vv29l8fif2oq8f77fj02b68',
+    authorizationKey: 'mv3fpbltearc0656336airrcm41h92eg4dq9',
     // your internal user id, or the account id that 
     // the user belongs to. 
     // This coudld also be a cookie you generate
@@ -51,16 +51,16 @@ var factory = splitio({
 });
 // And get the client instance you'll use
 var client = factory.client(key,'user');
-const main = document.body.querySelector('main');
+const header = document.body.querySelector('header');
 client.on(client.Event.SDK_READY, function() {
-  var treatment = client.getTreatment("double-column");
+  var treatment = client.getTreatment("text-color");
   console.log(treatment);
   if (treatment == "on") {
       // insert code here to show on treatment
-      main.className = 'double-column';
+      header.className = 'textColor';
       console.log("on");
   } else if (treatment == "off") {
-    main.className = '';
+    header.className = '';
       console.log("off");
       // insert code here to show off treatment
   } else {

@@ -155,4 +155,8 @@ body.single-entry main {
 .double-column journal-entry {
   width: 100%;
 }
+
+.textColor h1 {
+  color: red;
+}
 /* Feature Flag End - Double Column */
